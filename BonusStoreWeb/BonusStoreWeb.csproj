@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-BonusStoreWeb-326F04AC-4FB4-481A-A838-740E5E9E3B85</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Areas\Admin\" />
+    <None Remove="Areas\Customer\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="Areas\Customer\Views\" />
+    <None Remove="Areas\Customer\Views\Home\" />
+    <None Remove="Areas\Customer\Controllers\" />
+    <None Remove="Areas\Identity\Pages\Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\" />
+    <Folder Include="Areas\Customer\" />
+    <Folder Include="Areas\Customer\Views\" />
+    <Folder Include="Areas\Customer\Views\Home\" />
+    <Folder Include="Areas\Customer\Controllers\" />
+    <Folder Include="Areas\Identity\Pages\Account\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BonusStore.DataAccess\BonusStore.DataAccess.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
